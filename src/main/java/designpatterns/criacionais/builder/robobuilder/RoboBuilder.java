@@ -1,54 +1,58 @@
-package designpatterns.criacionais.builder.robobuilder.implementacao;
+package designpatterns.criacionais.builder.robobuilder;
 
 import designpatterns.criacionais.builder.robo.*;
-import designpatterns.criacionais.builder.robobuilder.RoboBuilderInterface;
+import designpatterns.criacionais.builder.robo.chassi.Chassi;
+import designpatterns.criacionais.builder.robo.mecanismodedeslocamento.MecanismoDeDeslocamento;
+import designpatterns.criacionais.builder.robo.mecanismodeinteracao.MecanismoDeInteracao;
+import designpatterns.criacionais.builder.robo.mecanismodevisao.MecanismoDeVisao;
 
 public class RoboBuilder implements RoboBuilderInterface {
 
     private Robo robo = null;
 
-    public RoboBuilderInterface novoRobo() {
+    @Override
+    public RoboBuilder novoRobo() {
         robo = new Robo();
         return this;
     }
 
     @Override
-    public RoboBuilderInterface definirNome(String nome) {
+    public RoboBuilder definirNome(String nome) {
         validarConstrucaoIniciada();
         robo.setNome(nome);
         return this;
     }
 
     @Override
-    public RoboBuilderInterface definirCor(String cor) {
+    public RoboBuilder definirCor(String cor) {
         validarConstrucaoIniciada();
         robo.setCor(cor);
         return this;
     }
 
     @Override
-    public RoboBuilderInterface definirMecanismoDeDeslocamento(MecanismoDeDeslocamento mecanismoDeDeslocamento) {
+    public RoboBuilder definirMecanismoDeDeslocamento(MecanismoDeDeslocamento mecanismoDeDeslocamento) {
         validarConstrucaoIniciada();
         construirRobo().setMecanismoDeDeslocamento(mecanismoDeDeslocamento);
         return this;
     }
 
     @Override
-    public RoboBuilderInterface definirMecanismoDeInteracao(MecanismoDeInteracao mecanismoDeInteracao) {
+    public RoboBuilder definirMecanismoDeInteracao(MecanismoDeInteracao mecanismoDeInteracao) {
         validarConstrucaoIniciada();
         robo.setMecanismoDeInteracao(mecanismoDeInteracao);
         return this;
     }
 
     @Override
-    public RoboBuilderInterface definirMecanismoDeVisao(MecanismoDeVisao mecanismoDeVisao) {
+    public RoboBuilder definirMecanismoDeVisao(MecanismoDeVisao mecanismoDeVisao) {
         validarConstrucaoIniciada();
         robo.setMecanismoDeVisao(mecanismoDeVisao);
         return this;
     }
 
     @Override
-    public RoboBuilderInterface definirChassi(Chassi chassi) {
+    public RoboBuilder definirChassi(Chassi chassi) {
         validarConstrucaoIniciada();
         robo.setChassi(chassi);
         return this;

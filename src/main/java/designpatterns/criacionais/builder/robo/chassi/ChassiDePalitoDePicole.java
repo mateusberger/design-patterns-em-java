@@ -1,6 +1,4 @@
-package designpatterns.criacionais.builder.robo.implementacoes;
-
-import designpatterns.criacionais.builder.robo.Chassi;
+package designpatterns.criacionais.builder.robo.chassi;
 
 public class ChassiDePalitoDePicole implements Chassi {
 

@@ -1,4 +1,6 @@
-package designpatterns.criacionais.builder.robo;
+package designpatterns.criacionais.builder.robo.mecanismodedeslocamento;
+
+import designpatterns.criacionais.builder.robo.ModeloDeParte;
 
 public interface MecanismoDeDeslocamento extends ModeloDeParte {
 

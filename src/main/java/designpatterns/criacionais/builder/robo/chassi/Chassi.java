@@ -1,4 +1,6 @@
-package designpatterns.criacionais.builder.robo;
+package designpatterns.criacionais.builder.robo.chassi;
+
+import designpatterns.criacionais.builder.robo.ModeloDeParte;
 
 public interface Chassi extends ModeloDeParte {
 

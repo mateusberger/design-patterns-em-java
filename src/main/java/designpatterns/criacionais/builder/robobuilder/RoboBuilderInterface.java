@@ -1,22 +1,26 @@
 package designpatterns.criacionais.builder.robobuilder;
 
 import designpatterns.criacionais.builder.robo.*;
+import designpatterns.criacionais.builder.robo.chassi.Chassi;
+import designpatterns.criacionais.builder.robo.mecanismodedeslocamento.MecanismoDeDeslocamento;
+import designpatterns.criacionais.builder.robo.mecanismodeinteracao.MecanismoDeInteracao;
+import designpatterns.criacionais.builder.robo.mecanismodevisao.MecanismoDeVisao;
 
-public interface RoboBuilderInterface {
+public interface RoboBuilderInterface <G extends RoboBuilderInterface> {
 
-    RoboBuilderInterface criarRobo();
+    G novoRobo();
 
-    RoboBuilderInterface definirNome(String nome);
+    G definirNome(String nome);
 
-    RoboBuilderInterface definirCor(String cor);
+    G definirCor(String cor);
 
-    RoboBuilderInterface definirMecanismoDeDeslocamento(MecanismoDeDeslocamento mecanismoDeDeslocamento);
+    G definirMecanismoDeDeslocamento(MecanismoDeDeslocamento mecanismoDeDeslocamento);
 
-    RoboBuilderInterface definirMecanismoDeInteracao(MecanismoDeInteracao mecanismoDeInteracao);
+    G definirMecanismoDeInteracao(MecanismoDeInteracao mecanismoDeInteracao);
 
-    RoboBuilderInterface definirMecanismoDeVisao(MecanismoDeVisao mecanismoDeVisao);
+    G definirMecanismoDeVisao(MecanismoDeVisao mecanismoDeVisao);
 
-    RoboBuilderInterface definirChassi(Chassi chassi);
+    G definirChassi(Chassi chassi);
 
     Robo construirRobo();
 

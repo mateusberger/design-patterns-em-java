@@ -1,4 +1,6 @@
-package designpatterns.criacionais.builder.robo;
+package designpatterns.criacionais.builder.robo.mecanismodeinteracao;
+
+import designpatterns.criacionais.builder.robo.ModeloDeParte;
 
 public interface MecanismoDeInteracao extends ModeloDeParte {
 
